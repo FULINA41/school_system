@@ -1,8 +1,85 @@
+<view class="viewtop">
 <view wx:if="{{hasUserInfo==true}}">
-  <image src="{{userInfo.avatarUrl}}"></image>
-  <view>{{userInfo.nickName}}</view>
+  <view class="view1">
+  <view class="xinxi">
+    <image class="img" src="{{userInfo.Img}}" bindtap="changeUserAvatar"></image>
+    <view class="column">
+      <view wx:if="{{isedit==0}}" class="edit">
+        <view class="nickname">{{userInfo.nickname}}</view>
+        <image class='icon' src="/asset/edit.png" bindtap="editname"></image>
+      </view>
+      <view wx:if="{{isedit==1}}" class="change">
+        <input class="input" value="{{userInfo.nickname}}"bindinput="changename"/>
+        <button style="width:36px;height:23px;" class="savebtn" bindtap="save" >保存</button>
+      </view>
+      <view class="major">{{userInfo.stuId}}</view>
+      <view class="major">{{userInfo.major+userInfo.class+"班"}}</view>
+    </view>
+  </view>
+    <view class="view2">
+      <view class="cube">
+        <view class="column2">
+          <view class="num">
+            <view wx:if="{{show==true}}">{{"￥"+userInfo.card}}</view>
+            <image wx:if="{{show==true}}" class="icon2" src="/asset/eye.png" bindtap="close" ></image>
+            <view wx:if="{{show==false}}">***</view>
+            <image wx:if="{{show==false}}" class="icon2" src="/asset/close.png" bindtap="show"></image>
+          </view>
+          <view class='text'>一卡通余额</view>
+        </view>
+      </view>
+      <view class="cube">
+        <view class="column2">
+          <view class="num">
+            <view wx:if="{{show2==true}}">{{"￥"+userInfo.wifi}}</view>
+            <image wx:if="{{show2==true}}" class="icon2" src="/asset/eye.png" bindtap="close2" ></image>
+            <view wx:if="{{show2==false}}">***</view>
+            <image wx:if="{{show2==false}}" class="icon2" src="/asset/close.png" bindtap="show2"></image>
+          </view>
+          <view class='text'>网关余额</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
 
 </view>
+</view>
+
+<view class='viewmedium'>
+  <view class="view3">
+    <view class="list-item">
+      <image class='fouricon' src='/asset/info.png'></image>
+      <view>修改个人信息</view>
+      <image class="arrow" src="/asset/arrow.png"></image>
+    </view>
+  </view>
+  <view class="view3">
+    <view class="list-item">
+      <image class='fouricon' src='/asset/problem.png'></image>
+      <view>常见问题与解答</view>
+      <image class="arrow" src="/asset/arrow.png"></image>
+    </view>
+  </view>
+  <view class="view3">
+    <view class="list-item">
+      <image class='fouricon' src='/asset/feedback.png'></image>
+      <view>意见反馈</view>
+      <image class="arrow" src="/asset/arrow.png"></image>
+    </view>
+  </view>
+  <view class="view3">
+    <view class="list-item">
+      <image class='fouricon' src='/asset/aboutus.png'></image>
+      <view>关于我们</view>
+      <image class="arrow" src="/asset/arrow.png"></image>
+    </view>
+  </view>
+</view>
+
+<button class='btn'>退出登录</button>
+
+
 
 
 <!--index.wxml-->

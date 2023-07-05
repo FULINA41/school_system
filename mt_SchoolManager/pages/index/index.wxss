@@ -17,3 +17,159 @@
 .usermotto {
   margin-top: 200px;
 }
+.img{
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+  border: 1px solid #ffffff;
+}
+.nickname{
+  margin-left: 15px;
+  font-size: 19px;
+  color:#181717;
+}
+.xinxi{
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.major{
+  margin-left: 15px;
+  color:#777777;
+  font-size: 15px;
+  margin-top: 4px;
+}
+.icon{
+  width:18px;
+  height: 18px;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.edit{
+  display: flex;
+  flex-direction: row;
+}
+.savebtn{
+  font-size: 15px;
+  padding: 0px;
+  position: relative;
+  top:1px;
+  border: 1px solid #6acac0 ;
+  color: #6acac0  ;
+  line-height:23px;
+}
+.input{
+  background-color: #ffffff;
+  border: 1px solid #6acac0 ;
+  color: #6acac0;
+  border-radius: 5px;
+  width:80px;
+  margin-right: 5px;
+}
+.change{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+}
+.viewtop{
+  position:absolute;
+  top:0px;
+  width: 100%;
+  height: 250px;
+  background-color:#6acac0  ;
+}
+.viewmedium{
+  position: relative;
+  top:325px;
+  width: 90%;
+  margin: 0rpx auto;
+  margin-top: -120rpx;
+  border: 1rpx solid lightgray;
+  border-radius: 20rpx;
+  background: white;
+}
+.view3{
+  width: 100%;
+  height: 100rpx;
+
+  border-bottom: 1rpx solid lightgray;
+}
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  /* margin-top: 20rpx; */
+  position: relative; /*父元素位置要设置为相对*/
+ 
+}
+.view1{
+  position: relative;
+  margin: 0rpx auto;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1rpx solid lightgray;
+  border-radius: 20rpx;
+  background: white;
+}
+.view2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 25px;
+
+}
+.cube{
+  width:135px;
+  height:65px;
+  background-color: #ddf2f1;
+  border-radius: 7px;
+  
+}
+.fouricon{
+  width:28px;
+  height:28px;
+  margin-left: 17px;
+  margin-right: 15px;
+  margin-top: 3px;
+}
+.arrow{
+  width: 25px;
+  height: 25px;
+  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  right: 0; /* 靠右调节 */
+  margin-right: 35rpx;
+}
+.btn{
+  width: 200px;
+  border: 1rpx solid lightgray;
+  background: white;
+  position: relative; /* 要约束所在位置的子元素的位置要设置成绝对 */
+  top: 380px; /* 靠右调节 */
+}
+.column2{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.num{ 
+  display: flex;
+  flex-direction: row;
+}
+.icon2{
+  width:23px;
+  height: 23px;
+  margin-top: -3px;
+  margin-left: 10px;
+}
+.text{
+  font-size: 14px;
+  margin-top: 5px;
+}
