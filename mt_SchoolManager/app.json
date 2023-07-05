@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/schedule/schedule",
+    "pages/login/login",
+    "pages/score/score"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {},
+  "tabBar": {
+    "custom": true,
+    "color": "#616161",
+    "selectedColor": "#2E312F",
+    "borderStyle": "black",
+    "list": [{
+        "pagePath": "pages/schedule/schedule",
+        "text": "查看课表",
+        "iconPath": "/asset/xuexijihua-(1).png",
+        "selectedIconPath": "/asset/xuexijihua-.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/asset/wode(1).png",
+        "selectedIconPath": "/asset/wode.png",
+        "text": "个人主页"
+
+      },
+      {
+        "pagePath": "pages/score/score",
+        "iconPath": "/asset/chengjidan-(1).png",
+        "selectedIconPath": "/asset/chengjidan-.png",
+        "text": "查看成绩"
+      }
+    ]
+  }
+}

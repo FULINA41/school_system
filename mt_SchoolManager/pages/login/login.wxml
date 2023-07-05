@@ -1,0 +1,24 @@
+<view class="title">
+  教务管理系统
+
+</view>
+
+<image class='img' src='../../asset/tongda.PNG'></image>
+<view class="Rectangle "></view>
+
+<view class="container">
+  <view calss="login">
+    <image class="yonghu" src="../../asset/yonghu.png"></image>
+    <input type="text" model:value="{{stuId}}" class="input" placeholder="请输入学号" />
+    <image class="yonghu" src="../../asset/mima.png"></image>
+    <input type="password" model:value="{{password}}" class="input" placeholder="请输入密码" />
+    <view bindtap="switchStatus" class="checkbox-item">
+      <checkbox checked="{{saveCount}}" class="blue"></checkbox>
+
+      <view class="rememmber">记住账号密码（本地存贮）</view>
+    </view>
+
+    <button bindtap="login" class="button">登录</button>
+
+  </view>
+</view>
