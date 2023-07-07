@@ -10,3 +10,4 @@ export function loginRequest(data){
 
   })
 }
+// export function get
