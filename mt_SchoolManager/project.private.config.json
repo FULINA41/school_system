@@ -16,8 +16,8 @@
           "scene": null
         },
         {
-          "name": "成绩",
-          "pathName": "pages/score/score",
+          "name": "课表",
+          "pathName": "pages/schedule/schedule",
           "query": "",
           "launchMode": "default",
           "scene": null
