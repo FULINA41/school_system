@@ -1,4 +1,5 @@
 // pages/score/score.js
+const app=getApp()
 Page({
 
   /**
@@ -9,8 +10,7 @@ Page({
     score:[
       {
         course:'',
-        chengji:'',
-        
+        chengji:'',      
       }
     ],
     selectedTerm: null, // 初始值为 null
@@ -40,6 +40,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    this.getscore()
     if(typeof this.getTabBar==='function' && this.getTabBar()){
       this.getTabBar().setData({
         selected:2
@@ -60,7 +61,7 @@ Page({
       selectedTerm: term,
     });
     wx.cloud.database().collection("score"+that.data.currentchoose).where({
-      // stuId : app.globalData.userInfo.stuId,
+      stuId : app.globalData.userInfo.stuId,
     }).get({
       success:function(res){
         console.log("stuId",app.globalData.userInfo.stuId)

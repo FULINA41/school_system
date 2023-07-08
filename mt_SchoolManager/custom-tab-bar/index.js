@@ -3,7 +3,7 @@ Component({
     data: {
  
       color: "#afafaf",
-      selectedColor: "#49315c",
+      selectedColor: "#6acac0",
       list: [
           {
                 "pagePath": "/pages/schedule/schedule",

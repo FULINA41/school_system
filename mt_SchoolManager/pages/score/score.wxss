@@ -47,6 +47,7 @@
   margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 15px;
 }
 
 .course-item {
@@ -64,6 +65,7 @@
 
 .course-score {
   margin-right: 5px;
+  color: #387b74;
 }
 .spacer {
   height: 6px; /* 设置间距高度 */
