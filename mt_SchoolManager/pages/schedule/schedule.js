@@ -65,6 +65,7 @@ onLoad(options) {
 onReady() {
 
 },
+
 onWeekChanged: function (e) {
   console.log("weekIndex is:",currentWeekIndex)
   this.setData({
