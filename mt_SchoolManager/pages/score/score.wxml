@@ -1,2 +1,36 @@
+<<<<<<< Updated upstream
 <!--pages/score/score.wxml-->
 <text>pages/score/score.wxml</text>
+=======
+<view class="top">
+  <view class="function">
+    <picker range="{{['2020-2021第一学期','2020-2021第二学期','2021-2022第一学期','2021-2022第二学期', '2022-2023第一学期' ,'2022-2023第二学期','2023-2024第一学期','2023-2024第二学期']}}" bindchange="onPickerChange">
+    <!-- bindchange:"onPickerChange" -->
+    <view class='cube'>
+      <view class="selector">
+
+          <view class='row'>
+          <view class='row2'>
+            <view>{{'选择学期'}}</view>
+            <image src="../../asset/timepicker.png" class="icon"></image>
+          </view>
+          <view>{{termList[currentchoose]}}</view>
+
+        </view>
+
+      </view>
+    </view>
+    </picker>
+  </view>
+  <view class="margin">
+    <view class='course' wx:for="{{score}}" wx:key="_id">
+      <view class="course-item">
+        <view class="course-name">{{item.course}}</view>
+        <view class="course-score {{item.chengji < 60 ? 'red' : ''}}">{{item.chengji}}</view>
+      </view>
+      <view class="spacer"></view>
+      <view class="line"></view>
+    </view>
+  </view>
+</view>
+>>>>>>> Stashed changes
