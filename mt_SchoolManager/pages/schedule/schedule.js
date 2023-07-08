@@ -14,7 +14,7 @@ Page({
  * 页面的初始数据
  */
 data: {
-  currentWeekIndex: 1, // 当前周
+  currentWeekIndex: 0, // 当前周
   totalWeek: 17, // 周总数
   showSwitchWeek: false, // 显示选择周数弹窗
   weekDayCount: 7,
@@ -67,7 +67,7 @@ onReady() {
 },
 
 onWeekChanged: function (e) {
-  console.log("weekIndex is:",currentWeekIndex)
+  console.log("weekIndex is:",e.detail.value)
   this.setData({
     currentWeekIndex: e.detail.value,
   })
