@@ -4,7 +4,7 @@
       第{{weeks[currentWeekIndex]}}周 ▼
     </view>
   </picker>
-  <image class="refresh" bindtap="onRefresh" wx:fixed="top" style="z-index: 999; position: relative; left: 144rpx; top: -40rpx" src="../../asset/refresh.png"></image>
+  <image class="refresh" bindtap="update" wx:fixed="top" style="z-index: 999; position: relative; left: 144rpx; top: -40rpx" src="../../asset/refresh.png"></image>
 </view>
 <!-- TODO: 实现课表内容 -->
 <view class="container0">
@@ -28,7 +28,7 @@
     <swiper duration="{{firstEntry ? 0 : 300}}" circular  class="course-swpier" current="{{nowWeek-1}}" bindchange="swiperSwitchWeek">
       <swiper-item wx:for="{{totalWeek}}" wx:key="index" wx:for-index="weekIndex">
         <view class="course-list">
-          <view wx:if="{{tools.indexOf(item.weeks,weekIndex+1)}}" bindtap="navCourseDetail" data-index="{{index}}" class="course-item" wx:for="{{courseList}}" wx:key="key" style="top: {{(item.section - 1) * 120}}rpx;left:{{(item.week - 1) * ((windowWidth * 2 - 50) / 7)}}rpx;height:{{item.sectionCount * 120}}rpx;">
+          <view wx:if="{{tools.indexOf(item.weeks,weekIndex+1)}}" bindtap="navCourseDetail" data-index="{{index}}" class="course-item"  wx:for="{{courseList}}" wx:key="key" style="top: {{(item.section - 1) * 100}}rpx;left:{{(item.week - 1) * ((windowWidth * 2 - 50) / 7)}}rpx;height:{{item.sectionCount * 120}}rpx;">
             <view class="course-item__content" style="background-color: {{courseColor[item.name]}};">
               {{item.name}}@{{item.address ? item.address : '未知'}}
             </view>

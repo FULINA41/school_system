@@ -10,4 +10,10 @@ export function loginRequest(data){
 
   })
 }
+export function getCourseListRequest(data) {
+  return createRequest({
+    url: '/courses',
+    data
+  })
+}
 // export function get
