@@ -1,13 +1,22 @@
+
 <view class="top">
   <view class="function">
-    <picker range="{{['2020-2021第一学期','2020-2021第二学期','2021-2022第一学期','2021-2022第二学期', '2022-2023第一学期' ,'2022-2023第二学期','2023-2024第一学期','2023-2024第二学期']}}" bindtap="onPickerChange">
+    <picker range="{{['2020-2021第一学期','2020-2021第二学期','2021-2022第一学期','2021-2022第二学期', '2022-2023第一学期' ,'2022-2023第二学期','2023-2024第一学期','2023-2024第二学期']}}" bindchange="onPickerChange">
     <!-- bindchange:"onPickerChange" -->
+    <view class='cube'>
       <view class="selector">
-        <view style="display: flex; align-items: center;">
-          <view>{{selectedTerm || '选择学期'}}</view>
-          <image src="../../asset/timepicker.png" class="icon"></image>
+
+          <view class='row'>
+          <view class='row2'>
+            <view>{{'选择学期'}}</view>
+            <image src="../../asset/timepicker.png" class="icon"></image>
+          </view>
+          <view>{{termList[currentchoose]}}</view>
+
         </view>
+
       </view>
+    </view>
     </picker>
   </view>
   <view class="margin">
@@ -21,3 +30,4 @@
     </view>
   </view>
 </view>
+
