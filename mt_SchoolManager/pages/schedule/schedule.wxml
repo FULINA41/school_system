@@ -25,18 +25,24 @@
       </view>
     </view>
     <!-- 表格内容 -->
-    <swiper duration="{{firstEntry ? 0 : 300}}" circular  class="course-swpier" current="{{nowWeek-1}}" bindchange="swiperSwitchWeek">
-      <swiper-item wx:for="{{totalWeek}}" wx:key="index" wx:for-index="weekIndex">
+    <view duration="{{firstEntry ? 0 : 300}}" circular  class="course-swpier" current="{{nowWeek-1}}" bindchange="swiperSwitchWeek">
+      <view wx:for="{{totalWeek}}" wx:for-index="currentWeekIndex">
         <view class="course-list">
+<<<<<<< Updated upstream
           <view wx:if="{{tools.indexOf(item.weeks,weekIndex+1)}}" bindtap="navCourseDetail" data-index="{{index}}" class="course-item" wx:for="{{courseList}}" wx:key="key" style="top: {{(item.section - 1) * 120}}rpx;left:{{(item.week - 1) * ((windowWidth * 2 - 50) / 7)}}rpx;height:{{item.sectionCount * 120}}rpx;">
+=======
+          <view wx:if="{{tools.indexOf(item.weeks,currentWeekIndex+1)}}" bindtap="navCourseDetail" data-index="{{index}}" class="course-item"  wx:for="{{courseList}}" style="top: {{(item.section - 1) * 100}}rpx;left:{{(item.week - 1) * ((windowWidth * 2 - 50) / 7)}}rpx;height:{{item.sectionCount * 120}}rpx;">
+>>>>>>> Stashed changes
             <view class="course-item__content" style="background-color: {{courseColor[item.name]}};">
               {{item.name}}@{{item.address ? item.address : '未知'}}
             </view>
           </view>
         </view>
-      </swiper-item>
-    </swiper>
-
+      </view>
+    </view>
+    <!-- <view wx:for="{{courseList}}">
+      <view>{{item.name}}</view>
+    </view> -->
   </view>
 </view>
 
