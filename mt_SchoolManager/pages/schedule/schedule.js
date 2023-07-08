@@ -177,10 +177,13 @@ Page({
 
   updateFn(firstEntry = false) {
     const that = this
+    console.log("update")
     getCourseListRequest().then(res => {
       that.setData({
         courseList: res.data
+        
       })
+      console.log("list:",this.data.courseList)
       that.buildCourseColor()
       if (!firstEntry) {
         wx.showToast({
@@ -228,6 +231,9 @@ Page({
       todayMonth,
       todayDay
     })
+  },
+  isCurrentWeekIndexInWeeks: function(weeks, currentWeekIndex) {
+    return weeks.includes(currentWeekIndex);
   },
 
   navCourseDetail(e) {
