@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-<!--pages/score/score.wxml-->
-<text>pages/score/score.wxml</text>
-=======
+
 <view class="top">
   <view class="function">
     <picker range="{{['2020-2021第一学期','2020-2021第二学期','2021-2022第一学期','2021-2022第二学期', '2022-2023第一学期' ,'2022-2023第二学期','2023-2024第一学期','2023-2024第二学期']}}" bindchange="onPickerChange">
@@ -33,4 +30,4 @@
     </view>
   </view>
 </view>
->>>>>>> Stashed changes
+

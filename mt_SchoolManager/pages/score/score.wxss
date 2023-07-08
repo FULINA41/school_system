@@ -1,6 +1,6 @@
-<<<<<<< Updated upstream
+
 /* pages/score/score.wxss */
-=======
+
 .top {
   /* height: 100px; */
   /* 路径 */
@@ -119,4 +119,4 @@ background: rgba(232, 224, 235, 0.5);
   display: flex;
   flex-direction: row;
 }
->>>>>>> Stashed changes
+

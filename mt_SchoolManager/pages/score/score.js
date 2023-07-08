@@ -5,10 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-<<<<<<< Updated upstream
 
-  },
-=======
     score:[
       {
         course:'',
@@ -37,7 +34,7 @@ Page({
     })
     
   },
->>>>>>> Stashed changes
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -49,8 +46,7 @@ Page({
       })
     }
   },
-<<<<<<< Updated upstream
-=======
+
   onPickerChange: function (event) {
     var that=this
     const index = event.detail.value;
@@ -76,7 +72,7 @@ Page({
       }
     })
   },
->>>>>>> Stashed changes
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
