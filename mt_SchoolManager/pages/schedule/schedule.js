@@ -66,10 +66,11 @@ Page({
   },
 
   onWeekChanged: function (e) {
-    console.log("weekIndex is:", e.detail.value)
+    // console.log("weekIndex is:", e.detail.value)
     this.setData({
       currentWeekIndex: e.detail.value,
     })
+    console.log("current:",this.data.currentWeekIndex)
   },
   /**
    * 生命周期函数--监听页面显示
@@ -81,34 +82,6 @@ Page({
       })
     }
 
-  },
-
-  selectWeek() {
-    this.setData({
-      showSwitchWeek: true
-    })
-  },
-
-  switchWeek(e) {
-    const week = e.currentTarget.dataset.week
-    this.setData({
-      showSwitchWeek: false
-    })
-    this.switchWeekFn(week)
-  },
-
-  // 切换周数
-  switchWeekFn(week) {
-    this.setData({
-      currentWeekIndex: week
-    })
-    this.getWeekDates()
-  },
-
-  hideSwitchWeek() {
-    this.setData({
-      showSwitchWeek: false
-    })
   },
 
   getWeekDates() {
@@ -192,6 +165,7 @@ Page({
         })
       }
       wx.setStorageSync(courseCacheKey, res.data)
+      this.onLoad
     })
   },
 

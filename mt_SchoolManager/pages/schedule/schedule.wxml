@@ -1,3 +1,4 @@
+<wxs src="../../utils/tools.wxs" module="tools"></wxs>
 <view class="container">
   <picker mode="selector" bindchange="onWeekChanged" value="{{currentWeekIndex}}" range="{{weeks}}" wx:fixed="top" style="z-index: 999">
     <view class="picker">
@@ -26,9 +27,9 @@
     </view>
     <!-- 表格内容 -->
     <view duration="{{firstEntry ? 0 : 300}}" circular  class="course-swpier" current="{{nowWeek-1}}" bindchange="swiperSwitchWeek">
-      <view  wx:key="index" wx:for-index="currentWeekIndex">
+      <view wx:for="{{totalWeek}}" wx:key="index" wx:for-index="WeekIndex">
         <view class="course-list">
-          <view class="course-item" wx:for="{{courseList}}" wx:key="key" wx:if="{{item.weeks.includes(currentweekindex)}}" style="top: {{(item.section - 1) * 90}}rpx;left:{{(item.week ) * ((30 * 2 ) )}}px;height:{{item.sectionCount * 110}}rpx;">
+          <view wx:if="{{tools.indexOf(item.weeks,currentWeekIndex+1)}}" class="course-item" wx:for="{{courseList}}" wx:key="key"  style="top: {{(item.section - 1) * 90}}rpx;left:{{(item.week ) * ((30 * 2 ) )}}px;height:{{item.sectionCount * 110}}rpx;">
             <view class="course-item__content" style="background-color: {{courseColor[item.name]}};">
               {{item.name}}@{{item.address ? item.address : '未知'}}
             </view>
