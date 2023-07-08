@@ -14,7 +14,6 @@ Page({
       class:'',
       card:'',
       wifi:'',
-      
     },
     show:false,
     show2:false,
