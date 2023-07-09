@@ -98,7 +98,8 @@ Page({
     that.setData({
       newList:newlist
     })
-    console.log("current:",this.data.currentWeekIndex)
+    this.getWeekDates()
+    console.log("month:",this.data.nowMonth)
   },
   /**
    * 生命周期函数--监听页面显示
@@ -175,6 +176,7 @@ Page({
 
   update() {
     this.updateFn()
+    
   },
 
   updateFn(firstEntry = false) {
