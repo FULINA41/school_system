@@ -26,6 +26,7 @@
     </view>
     <!-- 表格内容 -->
     <view duration="{{firstEntry ? 0 : 300}}" circular  class="course-swpier" current="{{nowWeek-1}}" bindchange="swiperSwitchWeek">
+<<<<<<< Updated upstream
       <view wx:for="{{totalWeek}}" wx:for-index="currentWeekIndex">
         <view class="course-list">
 <<<<<<< Updated upstream
@@ -33,12 +34,17 @@
 =======
           <view wx:if="{{tools.indexOf(item.weeks,currentWeekIndex+1)}}" bindtap="navCourseDetail" data-index="{{index}}" class="course-item"  wx:for="{{courseList}}" style="top: {{(item.section - 1) * 100}}rpx;left:{{(item.week - 1) * ((windowWidth * 2 - 50) / 7)}}rpx;height:{{item.sectionCount * 120}}rpx;">
 >>>>>>> Stashed changes
+=======
+      <!-- <view wx:for="{{totalWeek}}" wx:key="index" wx:for-index="WeekIndex"> -->
+        <view class="course-list">
+          <view class="course-item" wx:for="{{newList}}" wx:key="key"  style="top: {{(item.section - 1) * 90}}rpx;left:{{(item.week ) * ((30 * 2 ) )}}px;height:{{item.sectionCount * 110}}rpx;">
+>>>>>>> Stashed changes
             <view class="course-item__content" style="background-color: {{courseColor[item.name]}};">
               {{item.name}}@{{item.address ? item.address : '未知'}}
             </view>
           </view>
         </view>
-      </view>
+      <!-- </view> -->
     </view>
     <!-- <view wx:for="{{courseList}}">
       <view>{{item.name}}</view>

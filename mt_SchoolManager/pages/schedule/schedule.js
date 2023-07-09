@@ -10,6 +10,7 @@ const courseColorCacheKey = "courseColor"
 // pages/schedule/schedule.js
 Page({
 
+<<<<<<< Updated upstream
 /**
  * 页面的初始数据
  */
@@ -43,6 +44,40 @@ data: {
   // currentWeekIndex: 1, // 当前选择的周数索引
   weeks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
 },
+=======
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    currentWeekIndex: 0, // 当前周
+    totalWeek: 17, // 周总数
+    showSwitchWeek: false, // 显示选择周数弹窗
+    weekDayCount: 7,
+    startDate: '2023/02/20', // 开学日期
+    weekIndexText: ['一', '二', '三', '四', '五', '六', '日'],
+    nowMonth: 1, // 当前周的月份
+    courseList: [],
+    colorList: [
+      "#116A7B",
+      "#DD58D6",
+      "#30A2FF",
+      "#0079FF",
+      "#F79327",
+      "#47A992",
+      "#7A3E3E",
+      "#FF55BB",
+      "#A0D8B3",
+      "#539165",
+      "#3A98B9",
+      "#609966",
+    ],
+    courseColor: {},
+    weekCalendar: [1, 2, 3, 4, 5, 6, 7],
+    firstEntry: true,
+    weeks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    newList:[]
+  },
+>>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
 /**
@@ -77,10 +112,40 @@ onLoad(options) {
   },
 
   onWeekChanged: function (e) {
+<<<<<<< Updated upstream
     console.log("weekIndex is:", e.detail.value)
     this.setData({
       currentWeekIndex: e.detail.value,
     })
+=======
+    var that=this
+    var weekindex
+    var newlist=[]
+    // console.log("weekIndex is:", e.detail.value)
+    this.setData({
+      currentWeekIndex: e.detail.value,
+    })
+    console.log("current:",this.data.currentWeekIndex)
+    weekindex=parseInt(that.data.currentWeekIndex)+1
+    console.log("weekindex:",weekindex)
+    for(let item of that.data.courseList){
+      if(item.weeks.indexOf(weekindex)<0){
+        // console.log("item1:",item)
+      }
+      else{
+        console.log("item:",item)
+        newlist.push(item)
+      }
+
+    }
+    console.log("new:",newlist)
+    that.setData({
+      newList:newlist
+    })
+
+
+
+>>>>>>> Stashed changes
   },
   /**
    * 生命周期函数--监听页面显示
@@ -170,6 +235,7 @@ onLoad(options) {
     if (cache) {
       this.setData({
         courseList: cache,
+        newList:cache
       })
       console.log("courselist",that.data.courseList)
       if (!courseColorCache) {
