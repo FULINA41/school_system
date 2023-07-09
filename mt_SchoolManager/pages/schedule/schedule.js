@@ -13,6 +13,9 @@ Page({
   /**
    * 页面的初始数据
    */
+  /**
+   * 页面的初始数据
+   */
   data: {
     currentWeekIndex: 0, // 当前周
     totalWeek: 17, // 周总数
@@ -40,6 +43,7 @@ Page({
     weekCalendar: [1, 2, 3, 4, 5, 6, 7],
     firstEntry: true,
     weeks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+    newList:[]
   },
 
   /**
@@ -69,6 +73,30 @@ Page({
     // console.log("weekIndex is:", e.detail.value)
     this.setData({
       currentWeekIndex: e.detail.value,
+    })
+    var that=this
+    var weekindex
+    var newlist=[]
+    // console.log("weekIndex is:", e.detail.value)
+    this.setData({
+      currentWeekIndex: e.detail.value,
+    })
+    console.log("current:",this.data.currentWeekIndex)
+    weekindex=parseInt(that.data.currentWeekIndex)+1
+    console.log("weekindex:",weekindex)
+    for(let item of that.data.courseList){
+      if(item.weeks.indexOf(weekindex)<0){
+        // console.log("item1:",item)
+      }
+      else{
+        console.log("item:",item)
+        newlist.push(item)
+      }
+
+    }
+    console.log("new:",newlist)
+    that.setData({
+      newList:newlist
     })
     console.log("current:",this.data.currentWeekIndex)
   },
@@ -131,6 +159,7 @@ Page({
     if (cache) {
       this.setData({
         courseList: cache,
+        newList:cache
       })
       if (!courseColorCache) {
         this.buildCourseColor()
