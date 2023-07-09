@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="form">
+    <view class="field">
+      <view class="label">反馈类型：</view>
+      <radio-group name="type" bindchange="onTypeChange">
+        <label class="radio"><radio value="1" checked="{{type === 1}}"/>功能异常</label>
+        <label class="radio" style="position: relative; left: 38rpx; top: 0rpx"><radio value="2" checked="{{type === 2}}"/>产品建议</label>
+        <label class="radio" style="position: relative; left: 75rpx; top: 0rpx"><radio value="3" checked="{{type === 3}}"/>其他反馈</label>
+      </radio-group>
+    </view>
+    <view class="field">
+      <view class="label">反馈内容：</view>
+      <textarea class="input" placeholder="请输入您的反馈内容" bindinput="onContentInput"></textarea>
+    </view>
+    <view class="field">
+      <view class="label" style="position: relative; left: 0rpx; top: 0rpx">上传图片：</view>
+      <button class="button" bindtap="onChooseImage" style="position: relative; left: 0rpx; top: 40rpx">选择图片</button>
+      <view class="images">
+        <block wx:for="{{images}}">
+          <!-- <image class="image" src="{{item}}" mode="aspectFill" bindtap="onPreviewImage"/> -->
+        </block>
+      </view>
+    </view>
+    <button class="submit" bindtap="onSubmit" style="position: relative; left: 0rpx; top: 58rpx">提交反馈</button>
+  </view>
+</view>

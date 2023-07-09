@@ -35,6 +35,41 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "问题与解答",
+          "pathName": "pages/Questions/questions",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/logs/logs",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/aboutus/aboutus",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/feedback/feedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/art/art",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

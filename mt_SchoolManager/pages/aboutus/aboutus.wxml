@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <view class="content">
+      <view class="title">关于我们</view>
+      <view class="subtitle">本系统由莫童独立开发</view>
+      <view class="info">本系统调用了微信云数据库和 UAAS 后端 API，为用户提供高效、便捷的问答服务。个人邮箱：tongmo02@icloud.com  GitHub link:https://github.com/FULINA41 private blog:www.mtcareer.work</view>
+    </view>
+  </view>
+</view>

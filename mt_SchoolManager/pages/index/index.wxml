@@ -48,28 +48,28 @@
 
 <view class='viewmedium'>
   <view class="view3">
-    <view class="list-item">
+    <view class="list-item" bindtap="art">
       <image class='fouricon' src='/asset/info.png'></image>
-      <view>修改个人信息</view>
+      <view>个性化展示</view>
       <image class="arrow" src="/asset/arrow.png"></image>
     </view>
   </view>
   <view class="view3">
-    <view class="list-item">
+    <view class="list-item" bindtap="question">
       <image class='fouricon' src='/asset/problem.png'></image>
       <view>常见问题与解答</view>
       <image class="arrow" src="/asset/arrow.png"></image>
     </view>
   </view>
   <view class="view3">
-    <view class="list-item">
+    <view bindtap="feedback" class="list-item">
       <image class='fouricon' src='/asset/feedback.png'></image>
       <view>意见反馈</view>
       <image class="arrow" src="/asset/arrow.png"></image>
     </view>
   </view>
   <view class="view3">
-    <view class="list-item">
+    <view bindtap="AboutUs" class="list-item">
       <image class='fouricon' src='/asset/aboutus.png'></image>
       <view>关于我们</view>
       <image class="arrow" src="/asset/arrow.png"></image>

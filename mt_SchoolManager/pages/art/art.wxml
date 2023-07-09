@@ -1,0 +1,24 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <view class="header">
+    <text class="title">艺术静态页面示例</text>
+  </view>
+  <view class="main">
+    <view class="intro">
+      <text class="desc">欢迎来到艺术静态页面示例</text>
+    </view>
+    <view class="projects">
+      <block wx:for="{{projects}}" wx:key="index">
+        <view class="project">
+          <image class="artwork" src="{{item.artworkUrl}}" />
+          <text class="name">{{item.name}}</text>
+          <text class="artist">{{item.artist}}</text>
+          <text class="desc">{{item.desc}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="footer">
+    <text class="desc">© 2023 艺术静态页面示例</text>
+  </view>
+</view>

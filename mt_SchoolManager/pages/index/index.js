@@ -308,5 +308,38 @@ save(){
       // userInfo: e.detail.userInfo,
       
     })
+  },
+  //跳转小页面
+  question(){
+    wx.redirectTo({
+      url: '../Questions/questions',
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
+  AboutUs(){
+    wx.redirectTo({
+      url: '../aboutus/aboutus',
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
+  feedback(){
+    wx.redirectTo({
+      url: '../feedback/feedback',
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
+  },
+  art(){
+    wx.redirectTo({
+      url: '../art/art',
+      success: (res) => {},
+      fail: (res) => {},
+      complete: (res) => {},
+    })
   }
 })

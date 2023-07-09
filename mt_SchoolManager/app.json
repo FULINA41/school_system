@@ -3,8 +3,11 @@
     "pages/index/index",
     "pages/schedule/schedule",
     "pages/login/login",
-    "pages/score/score"
-    
+    "pages/score/score",
+    "pages/Questions/questions",
+    "pages/aboutus/aboutus",
+    "pages/feedback/feedback",
+    "pages/art/art"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,7 +22,8 @@
     "color": "#616161",
     "selectedColor": "#2E312F",
     "borderStyle": "black",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/schedule/schedule",
         "text": "查看课表",
         "iconPath": "/asset/xuexijihua-(1).png",
@@ -30,7 +34,6 @@
         "iconPath": "/asset/wode(1).png",
         "selectedIconPath": "/asset/wode.png",
         "text": "个人主页"
-
       },
       {
         "pagePath": "pages/score/score",
